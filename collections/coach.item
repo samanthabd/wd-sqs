@@ -1,0 +1,21 @@
+
+{.section item}
+
+  <!--WRAPPER-->
+  <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
+    <!-- main image (thumbnail) -->
+    {.if coachPicture}
+        <img {coachPicture|image-meta} />
+    {.end}
+    <!-- post title -->
+    <h2 class="title" data-content-field="coachName">
+       {coachName}
+    </h2>
+    <!-- excerpt or body -->
+    {.if coachDescription}
+      {coachDescription}
+    {.end}
+  </article>
+
+{.end}
+
