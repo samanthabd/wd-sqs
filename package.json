@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@squarespace/server": "^1.8.13"
+  }
+}
