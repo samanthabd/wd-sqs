@@ -4,16 +4,16 @@
   <!--WRAPPER-->
   <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
     <!-- main image (thumbnail) -->
-    {.if coachPicture}
-        <img {coachPicture|image-meta} />
+    {.if customContent.coachPicture}
+        <img {customContent.coachPicture|image-meta} />
     {.end}
     <!-- post title -->
     <h2 class="title" data-content-field="coachName">
-       {coachName}
+       {customContent.coachName}
     </h2>
     <!-- excerpt or body -->
-    {.if coachDescription}
-      {coachDescription}
+    {.if customContent.coachDescription}
+      {customContent.coachDescription}
     {.end}
   </article>
 
