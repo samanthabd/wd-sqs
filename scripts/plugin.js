@@ -4,6 +4,52 @@
   console.log('window.top')
   console.log(window.top)
 
+  const css = {
+   get styles() {
+    return `
+    .body-block:has(.dialog-tab-options:not(.hidden)) .dialog-tab-coach {
+  display: block !important;
+  position: relative;
+  opacity: 1 !important;
+  left: 0 !important;
+  z-index: 300 !important;
+}
+
+.body-block:has(.dialog-tab-coach) .dialog-tab-options {
+  position: relative;
+}
+
+.body-block:has(.dialog-tab-coach){
+  display: flex;
+  flex-direction: column-reverse;
+} 
+    `
+   }
+  }
+  function addCss() {
+    const newStyles = document.createElement("style")
+    newStyles.innerHTML = css.styles
+    window.top.document.querySelector("head").appendChild(newStyles)
+  }
+
+  function L(e, t, o) {
+    var r = document.createElement("link");
+    (r.href = e),
+        (r.rel = "stylesheet"),
+        (r.onload = function () {
+            o && o(null, { nodes: [this] });
+        }),
+        (t = t || document.getElementsByTagName("head")[0]),
+        t.appendChild(r);
+}
+
+  // function addCSS(){
+  //   window.top.document.querySelector("html.squarespace-damask") &&
+  // (window.top.document.getElementById("custom-tables-top") ||
+  //     L("https://assets.squarewebsites.org/custom-tables/style.min.css", window.top.document.getElementsByTagName("head")[0], function (e, t) {
+  //         console.log("Custom Table CSS added"), t && t.nodes[0].setAttribute("id", "custom-tables-top");
+  //     }))
+  //   }
   function createLoadingDiv(){
     let loadingEl = w.document.createElement('div');
     let loadingText = w.document.createElement('span');
@@ -118,6 +164,7 @@
      mainObserver.observe(targetNode, config);
    }
    observeMain();
+   addCss();
  }
 
   init(window.top)
