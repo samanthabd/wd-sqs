@@ -20,6 +20,7 @@
             continue
             }
             
+            console.log(mutation)
             let addedNode = mutation.addedNodes[0];
             
             if (addedNode.classList.contains("dialog-text-post-editor")) {
