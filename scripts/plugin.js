@@ -23,7 +23,7 @@
             
             let addedNode = mutation.addedNodes[0];
             
-            if (addedNode.classList.contains("dialog-text-post-editor")) {
+            if (addedNode.classList && addedNode.classList.contains("dialog-text-post-editor")) {
               console.log(mutation)
           //   let richText = addedNode.querySelector(".richText");
           //   if (richText) markdownPre(richText);
