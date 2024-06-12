@@ -138,6 +138,9 @@
            
          //let labelParent = addedNode.parentNode;
              console.log(labelParent);
+             let mainContainer = mutation.target.closest('.main-container');
+             let bodyBlock = mainContainer.querySelector('.body-block');
+
              let i = 0;
              
              for (el of labelParent.childNodes) {
@@ -147,6 +150,9 @@
                }
                else if (el.innerText.toLocaleLowerCase()== "options") {
                 el.click();
+                el.addEventListener('click', (e)=>{
+                  bodyBlock.removeAllListeners();
+                })
                }
                else if (el.innerText.toLocaleLowerCase()== "coach") {
                 el.innerText = "Coach Details"
@@ -154,8 +160,7 @@
                i++
              }
           
-             let mainContainer = mutation.target.closest('.main-container');
-             let bodyBlock = mainContainer.querySelector('.body-block');
+             
              console.log(bodyBlock.eventListeners())
              bodyBlock.removeAllListeners();
        }
