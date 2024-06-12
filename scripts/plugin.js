@@ -97,12 +97,12 @@
              let bodyBlock = addedNode.querySelector('.body-block');
              let firstTab = bodyBlock.childNodes[0];
              let coachTab = bodyBlock.querySelector('.dialog-tab-coach');
-             coachTab.classList.remove('hidden')
-             coachTab.style.left = "0";
-             coachTab.style.zIndex= "300";
+          //   coachTab.classList.remove('hidden')
+           //  coachTab.style.left = "0";
+            // coachTab.style.zIndex= "300";
             // coachTab.style.color = "#3e3e3e";
             // coachTab.style.borderBottomColor = "#3e3e3e";
-             firstTab.classList.add('hidden');
+            // firstTab.classList.add('hidden');
         //      let label = w.document.querySelector('.tabbed-header-container [data-tab]')
         //    let activeClass = label.classList[1]
         //    labelParent = label.parentNode;
@@ -140,7 +140,7 @@
              let i = 0;
              
              for (el of labelParent.childNodes) {
-           console.log(el)
+         
                if (i == 0) {
                  //el.classList.remove(activeClass);
                }
@@ -152,7 +152,7 @@
                }
                i++
              }
-           loadingEl.remove();
+          
 
        }
        }
