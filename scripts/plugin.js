@@ -88,13 +88,14 @@
            }
            
            let addedNode = mutation.addedNodes[0];
+           let bodyBlock
            if (addedNode.classList && addedNode.classList.contains("dialog-text-post-editor")) {	
            
            //  addedNode.insertAdjacentElement('afterbegin', loadingEl)
              
           
              let title = addedNode.querySelector('.title-text');
-             let bodyBlock = addedNode.querySelector('.body-block');
+             bodyBlock = addedNode.querySelector('.body-block');
              let firstTab = bodyBlock.childNodes[0];
              let coachTab = bodyBlock.querySelector('.dialog-tab-coach');
           //   coachTab.classList.remove('hidden')
@@ -153,7 +154,7 @@
                i++
              }
           
-             let bodyBlock = addedNode.querySelector('.body-block');
+           //  let bodyBlock = addedNode.querySelector('.body-block');
              console.log(bodyBlock.eventListeners())
              bodyBlock.removeAllListeners();
        }
