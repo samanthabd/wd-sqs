@@ -15,19 +15,19 @@
       };
       const callback = (mutationList, observer) => {
         for (const mutation of mutationList) {
+         // console.log(mutation)
           let isAdditiveMutation = !!mutation.addedNodes.length
           if (!isAdditiveMutation) {
             continue
             }
             
-            console.log(mutation)
             let addedNode = mutation.addedNodes[0];
             
             if (addedNode.classList.contains("dialog-text-post-editor")) {
-            console.log(mutation)
+              console.log(mutation)
           //   let richText = addedNode.querySelector(".richText");
           //   if (richText) markdownPre(richText);
-          // }
+            }
           }
           // if (mutation.target.className == "memos") {
           //   observeMemosLoad()
