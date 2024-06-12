@@ -5,22 +5,16 @@
   <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
   <p>A coach item</p>
     <!-- main image (thumbnail) -->
+        <img {@|image-meta} />
     {.if coachPicture}
-        <img {coachPicture|image-meta} />
     {.end}
     <!-- post title -->
     <h2 class="title" data-content-field="coachName">
-       {customContent.coachName}
-       {coachName}
+       {title}
     </h2>
     <!-- excerpt or body -->
-    {.if coachDescription}
-      {coachDescription}
-    {.end}
-    {.if customContent.coachDescription}
-      <p>customContent</p>
-      {customContent.coachDescription}
-    {.end}
+      {body}
+
   </article>
 
 {.or}
