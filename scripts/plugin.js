@@ -154,7 +154,7 @@
              }
           
              let bodyBlock = addedNode.querySelector('.body-block');
-             console.log(bodyBlock.eventListener())
+             console.log(bodyBlock.eventListeners())
              bodyBlock.removeAllListeners();
        }
        }
