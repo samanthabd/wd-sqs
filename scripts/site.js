@@ -7,6 +7,7 @@
  */
 
 (function() {
+  console.log('site.js')
   'use strict';
 
   // Load all images via Squarespace's Responsive ImageLoader
