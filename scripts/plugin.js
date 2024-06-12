@@ -125,6 +125,7 @@
              
          //   let richText = addedNode.querySelector(".richText");
          //   if (richText) markdownPre(richText);
+         bodyBlock.removeAllListeners();
            }
          // console.log(mutation)
          
@@ -143,13 +144,16 @@
                if (i == 0) {
                  //el.classList.remove(activeClass);
                }
-               else if (el.innerText.toLocaleLowerCase()== "coach") {
+               else if (el.innerText.toLocaleLowerCase()== "options") {
                 el.click();
+               }
+               else if (el.innerText.toLocaleLowerCase()== "coach") {
                 el.innerText = "Coach Details"
                }
                i++
              }
            loadingEl.remove();
+
        }
        }
          // if (mutation.target.className == "memos") {
