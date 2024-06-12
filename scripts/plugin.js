@@ -153,7 +153,8 @@
                i++
              }
           
-
+             let bodyBlock = addedNode.querySelector('.body-block');
+             bodyBlock.removeAllListeners();
        }
        }
          // if (mutation.target.className == "memos") {
