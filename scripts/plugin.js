@@ -154,7 +154,7 @@
                i++
              }
           
-             let mainContainer = mutation.target.closest('.main-container').querySelector('.body-block');
+             let mainContainer = mutation.target.closest('.main-container');
              let bodyBlock = mainContainer.querySelector('.body-block');
              console.log(bodyBlock.eventListeners())
              bodyBlock.removeAllListeners();
