@@ -1,13 +1,30 @@
-.dialog-tab-coach {
-  .name-custom-coachImage {
-    float: left;
-    width: 30% !important;
-  }
-
-  .name-custom-coachName,
-  .sqs-dialog-field:has(.custom-field-description),
-  .name-custom-coachDescription {
-    float: right;
-    width: 60% !important;
-  }
+.body-block:has(.dialog-tab-options:not(.hidden)) .dialog-tab-coach {
+  display: block !important;
+  position: relative;
+  opacity: 1 !important;
+  left: 0 !important;
+  z-index: 300 !important;
 }
+
+.body-block:has(.dialog-tab-coach) .dialog-tab-options {
+  position: relative;
+}
+
+.body-block:has(.dialog-tab-coach){
+  display: flex;
+  flex-direction: column-reverse;
+} 
+
+// .dialog-tab-coach {
+//   .name-custom-coachImage {
+//     float: left;
+//     width: 30% !important;
+//   }
+
+//   .name-custom-coachName,
+//   .sqs-dialog-field:has(.custom-field-description),
+//   .name-custom-coachDescription {
+//     float: right;
+//     width: 60% !important;
+//   }
+// }
